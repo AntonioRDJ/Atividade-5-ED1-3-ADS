@@ -82,8 +82,8 @@ Funcionario* incluir(Funcionario* lista, int prontuario,double salario,string no
 	
 	Funcionario* novo = new Funcionario();
 	novo->prontuario = prontuario;
-    novo->salario = salario;
-    novo->nome = nome;
+  novo->salario = salario;
+  novo->nome = nome;
 	novo->prox = lista;
 	return novo;
 }
