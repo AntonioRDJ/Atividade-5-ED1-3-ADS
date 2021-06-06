@@ -91,48 +91,48 @@ Funcionario* incluir(Funcionario* lista, int prontuario,double salario,string no
 void menu()
 {
 	bool menu = true;
-    int op = 0;
-    Funcionario *listaFunc;
-    listaFunc = init();
+	int op = 0;
+	Funcionario *listaFunc;
+	listaFunc = init();
     
-    while (menu)
+  while (menu)
 	{
 		string nome = "";
-        double salario = 0;
-  		int prontuario = 0;
+		double salario = 0;
+		int prontuario = 0;
         	
 		cout << "\nSelecione uma opcao:"<<endl;
-        cout << "\n1.Cadastrar funcionario"<<endl;
-        cout << "2.Excluir funcionario"<<endl;
-        cout << "3.Pesquisar funcionario"<<endl;
-        cout << "4.Listar funcionarios"<<endl;
-        cout << "0.SAIR"<<endl;
-        cin >> op;
-        cout << endl;
+		cout << "\n1.Cadastrar funcionario"<<endl;
+		cout << "2.Excluir funcionario"<<endl;
+		cout << "3.Pesquisar funcionario"<<endl;
+		cout << "4.Listar funcionarios"<<endl;
+		cout << "0.SAIR"<<endl;
+		cin >> op;
+		cout << endl;
         
-        switch(op)
-        {
-            case 0: 
+		switch(op)
+		{
+			case 0: 
 				cout<<"Obrigado\n\n"<<endl;
 				menu = false;
-            break;
-            case 1: 
+				break;
+			case 1: 
 				cout << "Digite o nome do Funcionario:" << endl;
 				cin >> nome;
 				cout << "Digite o salario do Funcionario:" << endl;
 				cin >> salario;
 				cout << "Digite o prontuario do Funcionario" << endl;
 				cin >> prontuario;
-				
+		
 				listaFunc = incluir(listaFunc, prontuario, salario, nome);
-            break;
-            case 2: 
+				break;
+			case 2: 
 				cout << "Digite o prontuario do Funcionario" << endl;
 				cin >> prontuario;
 				
 				listaFunc = excluir(listaFunc, prontuario);
-            break;
-            case 3: {
+				break;
+			case 3: {
 				cout << "Digite o prontuario do Funcionario" << endl;
 				cin >> prontuario;
 				
@@ -142,13 +142,13 @@ void menu()
 				} else {
 					cout << "Funcionario nao encontrado." << endl;
 				}
-            	break;
+				break;
 			}
-            case 4: 
+			case 4: 
 				lista(listaFunc);
-            break;  
-        }
-    }
+				break;  
+		}
+  }
 }
 
 int main(int argc, char** argv) {
@@ -157,24 +157,24 @@ int main(int argc, char** argv) {
     return 0;
 }
 /*
-À partir da estrutura "Funcionario" descrita abaixo:
+ï¿½ partir da estrutura "Funcionario" descrita abaixo:
 
 Funcionario
   - prontuario: int
   - nome: string
   - salario: double
-Elabore um programa que permita administrar uma lista de funcionários e, através de um menu, ofereça as seguintes opções:
+Elabore um programa que permita administrar uma lista de funcionï¿½rios e, atravï¿½s de um menu, ofereï¿½a as seguintes opï¿½ï¿½es:
 
    0. Sair
    1. Incluir
    2. Excluir
    3. Pesquisar
    4. Listar
-OBSERVAÇÕES:
+OBSERVAï¿½ï¿½ES:
 
-a) Não poderão ser cadastrados funcionários com mesmo prontuário;
+a) Nï¿½o poderï¿½o ser cadastrados funcionï¿½rios com mesmo prontuï¿½rio;
 
-b) A pesquisa de funcionário deverá utilizar o atributo "Prontuário" como critério e, quando encontrado, deverão ser exibidos os demais atributos;
+b) A pesquisa de funcionï¿½rio deverï¿½ utilizar o atributo "Prontuï¿½rio" como critï¿½rio e, quando encontrado, deverï¿½o ser exibidos os demais atributos;
 
-c) A listagem dos funcionários deverá apresentar todos os seus atributos e, ao final, informar o total dos salários.
+c) A listagem dos funcionï¿½rios deverï¿½ apresentar todos os seus atributos e, ao final, informar o total dos salï¿½rios.
 */
